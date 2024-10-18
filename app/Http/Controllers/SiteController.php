@@ -2,13 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Servico;
 use Illuminate\Http\Request;
 
 class SiteController extends Controller
 {
     public function home()
     {
-       return view('home'); 
+        //$servicos = Servico::with('fotos')->get();
+        $servicos = Servico::all();
+
+        //dd($servicos);
+     
+       return view('home', compact('servicos')); 
+
     }
 
     public function sobreNos()

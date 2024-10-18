@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string("titulo",100);
             $table->text("descricao");
             $table->decimal("valor");
-            $table->integer("qtde_votos");
-            $table->integer("total_votos");
+            $table->integer("qtde_votos")->default(0);
+            $table->integer("total_votos")->default(0);
             $table->string("telefone",20)->nullable();
             $table->string("celular",20);
             $table->string("endereco");

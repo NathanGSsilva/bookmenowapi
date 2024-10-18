@@ -30,7 +30,7 @@
                     <h1 class="ps-3 text-white">ADMIN</h1>
                 </div>
                 <div class="col-2 text-end pe-4">
-                    <a href="logout.php" class="btn btn-primary">Sair</a>
+                    <a href="{{ route('logout') }}" class="btn btn-primary">Sair</a>
                 </div>
             </div>
         </header>
@@ -40,10 +40,10 @@
             <div id="menu" class="col-md-2">
                 <nav>
                     <ul class="list-group mt-3">
-                        <li class="list-group-item"><a href="#">Home</a></li>
-                        <li class="list-group-item"><a href="#">Categorias</a></li>
-                        <li class="list-group-item"><a href="#">Serviços</a></li>
-                        <li class="list-group-item"><a href="#">Usuários</a></li>
+                        <li class="list-group-item"><a href="{{ route('dashboard') }}">Home</a></li>
+                        <li class="list-group-item"><a href="{{ route('categoria.index') }}">Categorias</a></li>
+                        <li class="list-group-item"><a href="{{ route('servico.index') }}">Serviços</a></li>
+                        <li class="list-group-item"><a href="{{ route('usuario.index') }}">Usuários</a></li>
                     </ul>
                 </nav>
 

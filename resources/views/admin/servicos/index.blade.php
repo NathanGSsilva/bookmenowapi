@@ -2,8 +2,8 @@
 
 @section('conteudo')
     <div class="d-flex justify-content-between mt-3">
-        <h2>Lista de Usuarios</h2>
-        <a href="{{ route('usuario.create') }}" class="btn btn-primary">Cadastrar</a>
+        <h2>Lista de Serviços</h2>
+        <a href="{{ route('servico.create') }}" class="btn btn-primary">Cadastrar</a>
     </div>
     <hr>
 
@@ -24,24 +24,25 @@
         <thead>
             <tr>
                 <th>ID</th>
-
-                <th>Nome</th>
-                <th>E-mail</th>
+                <th>Título</th>
+                <th>Descrição</th>
+                <th>Valor</th>
                 <th>Ação</th>
             </tr>
         </thead>
         <tbody>
 
-            @foreach ($usuarios as $user)
+            @foreach ($servicos as $serv)
                 <tr>
-                    <td>{{ $user->id }}</td>
-                    <td>{{ $user->nome }}</td>
-                    <td>{{ $user->email }}</td>
+                    <td>{{ $serv->id }}</td>
+                    <td>{{ $serv->titulo }}</td>
+                    <td>{{ $serv->descricao }}</td>
+                    <td>{{ $serv->valor }}</td>
                     <td>
-                        <a href="{{ route('usuario.show', ['id' => $user->id]) }}" class="btn btn-primary">Visualizar</a>
-                        <a href="{{ route('usuario.edit', ['id' => $user->id]) }}" class="btn btn-secondary">Editar</a>
+                        <a href="{{ route('servico.show', ['id' => $serv->id]) }}" class="btn btn-primary">Visualizar</a>
+                        <a href="{{ route('servico.edit', ['id' => $serv->id]) }}" class="btn btn-secondary">Editar</a>
 
-                        <form action="{{ route('usuario.destroy', ['id' => $user->id]) }}" method="post"
+                        <form action="{{ route('servico.destroy', ['id' => $serv->id]) }}" method="post"
                             style="display: inline-block">
 
                             @csrf
@@ -58,4 +59,6 @@
             @endforeach
         </tbody>
     </table>
+
+    {{-- {{ $servicos->links() }} --}}
 @endsection

@@ -2,8 +2,8 @@
 
 @section('conteudo')
     <div class="d-flex justify-content-between mt-3">
-        <h2>Lista de Usuarios</h2>
-        <a href="{{ route('usuario.create') }}" class="btn btn-primary">Cadastrar</a>
+        <h2>Lista de Categorias</h2>
+        <a href="{{ route('categoria.create') }}" class="btn btn-primary">Cadastrar</a>
     </div>
     <hr>
 
@@ -24,24 +24,23 @@
         <thead>
             <tr>
                 <th>ID</th>
-
-                <th>Nome</th>
-                <th>E-mail</th>
+                <th>Título</th>
+                <th>Imagem</th>
                 <th>Ação</th>
             </tr>
         </thead>
         <tbody>
 
-            @foreach ($usuarios as $user)
+            @foreach ($categorias as $cat)
                 <tr>
-                    <td>{{ $user->id }}</td>
-                    <td>{{ $user->nome }}</td>
-                    <td>{{ $user->email }}</td>
+                    <td>{{ $cat->id }}</td>
+                    <td>{{ $cat->titulo }}</td>
+                    <td><img src="{{ $cat->imagem }}"></td>
                     <td>
-                        <a href="{{ route('usuario.show', ['id' => $user->id]) }}" class="btn btn-primary">Visualizar</a>
-                        <a href="{{ route('usuario.edit', ['id' => $user->id]) }}" class="btn btn-secondary">Editar</a>
+                        <a href="{{ route('categoria.show', ['id' => $cat->id]) }}" class="btn btn-primary">Visualizar</a>
+                        <a href="{{ route('categoria.edit', ['id' => $cat->id]) }}" class="btn btn-secondary">Editar</a>
 
-                        <form action="{{ route('usuario.destroy', ['id' => $user->id]) }}" method="post"
+                        <form action="{{ route('categoria.destroy', ['id' => $cat->id]) }}" method="post"
                             style="display: inline-block">
 
                             @csrf

@@ -43,7 +43,7 @@
         </nav>
 
         <div id="botaoTopo">
-            <a href="login.html" class="btn-secundario">Login</a>
+            <a href="{{ route('login.form') }}" class="btn-secundario">Login</a>
             <a href="registrar.html" class="btn-secundario">Registrar</a>
         </div>
     </header>

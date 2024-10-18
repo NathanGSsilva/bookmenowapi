@@ -33,6 +33,7 @@ class CategoriaSeeder extends Seeder
                 'descricao' => $faker->sentence()
             ]);
             
+            
         }
 
 
