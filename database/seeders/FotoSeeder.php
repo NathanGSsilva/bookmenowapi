@@ -15,43 +15,43 @@ class FotoSeeder extends Seeder
     {
         DB::table('fotos')->insert([
             [
-               'imagem' => asset('img/categoria-informatica.jpg'),
+               'imagem' => 'img/categoria-informatica.jpg',
                 'servico_id'=> 1
             ],
             [
-                'imagem' => asset('img/categoria-informatica.jpg'),
+                'imagem' => 'img/categoria-informatica.jpg',
                 'servico_id' => 2
             ],
             [
-                'imagem' => asset('img/categoria-informatica.jpg'),
+                'imagem' => 'img/categoria-informatica.jpg',
                 'servico_id' => 3
             ],
             [
-                'imagem' => asset('img/categoria-informatica.jpg'),
+                'imagem' => 'img/categoria-informatica.jpg',
                 'servico_id' => 4
             ],
             [
-                'imagem' => asset('img/categoria-informatica.jpg'),
+                'imagem' => 'img/categoria-informatica.jpg',
                 'servico_id' => 5
             ],
             [
-                'imagem' => asset('img/categoria-informatica.jpg'),
+                'imagem' => 'img/categoria-informatica.jpg',
                 'servico_id' => 6
             ],
             [
-                'imagem' => asset('img/categoria-informatica.jpg'),
+                'imagem' => 'img/categoria-informatica.jpg',
                 'servico_id' => 7
             ],
             [
-                'imagem' => asset('img/categoria-informatica.jpg'),
+                'imagem' => 'img/categoria-informatica.jpg',
                 'servico_id' => 8
             ],
             [
-                'imagem' => asset('img/categoria-informatica.jpg'),
+                'imagem' => 'img/categoria-informatica.jpg',
                 'servico_id' => 9
             ],
             [
-                'imagem' => asset('img/categoria-informatica.jpg'),
+                'imagem' => 'img/categoria-informatica.jpg',
                 'servico_id' => 10
             ],
 

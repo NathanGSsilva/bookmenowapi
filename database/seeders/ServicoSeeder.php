@@ -201,24 +201,7 @@ class ServicoSeeder extends Seeder
             'usuario_id' => rand(1, 10),
             'categoria_id' => rand(1, 6)
         ]);
-        DB::table('servicos')->insert([
-            'titulo' => 'Formatação de computador ',
-            'descricao' => $faker->sentence(),
-            'valor' => 30.00,
-            'qtde_votos' => 5,
-            'total_votos' => 10,
-            'telefone' => 15112365489,
-            'celular' => 1123546987,
-            'endereco' => 'rua:dante jose vrech',
-            'numero' => 386,
-            'bairro' => 'santa maria antonieta',
-            'complemento' => "casa",
-            'cidade' => 'Marilia',
-            'estado' => 'SP',
-            'CEP' => 1236548,
-            'usuario_id' => rand(1, 10),
-            'categoria_id' => rand(1, 6)
-        ]);
+       
         
         
     }
